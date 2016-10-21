@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.14.0",
-    "twit": "^2.2.5"
+    "Twit": "^2.2.5"
   },
   "engines": {
     "node": "5.9.1"
