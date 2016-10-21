@@ -8,11 +8,14 @@
     "url": "https://github.com/AstroCB/"
   },
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "author": "Cameron Bernhardt (AstroCB)",
   "license": "MIT",
   "dependencies": {
     "twit": "^2.2.5"
+  },
+  "engines": {
+    "node": "4.1.1"
   }
 }
