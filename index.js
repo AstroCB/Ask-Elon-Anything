@@ -159,6 +159,7 @@ const stream = bot.stream('user', {
 });
 
 stream.on('tweet', function(tweet) {
+    console.log("Tweet received");
     const replyId = tweet.in_reply_to_user_id;
     const user = tweet.user;
     if (replyId) { // Is a reply
@@ -169,4 +170,5 @@ stream.on('tweet', function(tweet) {
     }
 });
 
+console.log("Starting stream");
 stream.start();
