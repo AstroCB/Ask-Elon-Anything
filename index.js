@@ -1,5 +1,6 @@
 require('./heroku'); // Config Heroku ports
 const Twit = require('Twit');
+console.log(Twit);
 const elonId = 789256792677179392; // AskElon user ID
 const elons = [
     "I think it would be great to be born on Earth and to die on Mars. Just hopefully not at the point of impact.",
