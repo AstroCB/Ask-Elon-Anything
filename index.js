@@ -1,5 +1,4 @@
 require('./heroku'); // Config Heroku ports
-console.log('Loading Twit');
 const Twit = require('twit'); // Lowercase for Heroku, but usually capitalized
 const elonId = 789256792677179392; // AskElon user ID
 const elons = [
