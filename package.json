@@ -1,0 +1,18 @@
+{
+  "name": "ask-elon-anything",
+  "version": "1.0.0",
+  "description": "Get advice from the legend himself.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AstroCB/"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Cameron Bernhardt (AstroCB)",
+  "license": "MIT",
+  "dependencies": {
+    "twit": "^2.2.5"
+  }
+}
