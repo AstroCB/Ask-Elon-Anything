@@ -1,4 +1,4 @@
-require('./heroku'); // Config Heroku ports
+// require('./heroku'); // Config Heroku ports
 const Twit = require('Twit');
 const elonId = 789256792677179392; // AskElon user ID
 const elons = [
