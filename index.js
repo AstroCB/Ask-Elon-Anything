@@ -168,11 +168,11 @@ stream.on('tweet', function(tweet) {
         }
     }
 });
-stream.on('error'), function(err) {
+stream.on('error', function(err) {
   console.log("Stream error: " + e);
   console.log("Restarting stream...");
   stream.stop();
   stream.start();
-}
+});
 console.log("Starting stream...");
 stream.start();
