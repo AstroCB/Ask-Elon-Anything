@@ -170,5 +170,11 @@ stream.on('tweet', function(tweet) {
     }
 });
 
-console.log("Starting stream");
-stream.start();
+try {
+    console.log("Starting stream");
+    stream.start();
+} catch (e) {
+    console.log("Crashed: " + e);
+    stream.stop();
+    stream.start();
+}
