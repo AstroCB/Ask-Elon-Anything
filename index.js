@@ -121,7 +121,7 @@ const elons = [
 const bot = new Twit({
     consumer_key: 'rkWDuXPE4oVgqDbsOANVUtRvY',
     consumer_secret: process.env.consumer_secret,
-    access_token: '789256792677179392-uPxPJ0aq9n67tcL6iisGWvQbQwEv6aw',
+    access_token: '789256792677179392-fc2CyMSYb5fgpD36Nt1wlBA8DA0BYhW',
     access_token_secret: process.env.access_token_secret
 });
 bot.tweetReply = function(msg, reply_to) {
