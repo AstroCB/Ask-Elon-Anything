@@ -118,7 +118,8 @@ const elons = [
     "30-35 million dollars... Imagine there was a pallet of cash, that was vomiting through the atmosphere, and it was going to burn up, and smash into tiny pieces. Would you try to save it? Probably yes. Yeah, that sounds like a good idea. Umm, So, yeah, we want to get it back.",
     "I thought 'it's probably not going to work.'  But then for the philanthropic mission, the greenhouse to Mars, I was 100% certain of losing the money that I put in there.  So being only 90% likely to lose it for SpaceX seemed like an improvement."
 ];
-
+console.log("Consumer: " + process.env.consumer_secret);
+console.log("Token: " + process.env.access_token_secret);
 const bot = new Twit({
     consumer_key: 'rkWDuXPE4oVgqDbsOANVUtRvY',
     consumer_secret: process.env.consumer_secret,
@@ -169,12 +170,5 @@ stream.on('tweet', function(tweet) {
         }
     }
 });
-
-try {
-    console.log("Starting stream");
-    stream.start();
-} catch (e) {
-    console.log("Crashed: " + e);
-    stream.stop();
-    stream.start();
-}
+console.log("Starting stream");
+stream.start();
