@@ -169,7 +169,7 @@ stream.on('tweet', function(tweet) {
     }
 });
 stream.on('error', function(err) {
-  console.log("Stream error: " + e);
+  console.log("Stream error: " + err);
   console.log("Restarting stream...");
   stream.stop();
   stream.start();
