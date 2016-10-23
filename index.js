@@ -120,10 +120,10 @@ const elons = [
 ];
 
 const bot = new Twit({
-    consumer_key: 'e2IhpR5ehqf6gVEiyPUZAuI9V',
-    consumer_secret: '8S3uZzx9L1fYQuikmgf6GQ6o58MvtgrzGpWW1VOIHCQ8YMCRbh',
+    consumer_key: 'rkWDuXPE4oVgqDbsOANVUtRvY',
+    consumer_secret: process.env.consumer_secret,
     access_token: '789256792677179392-uPxPJ0aq9n67tcL6iisGWvQbQwEv6aw',
-    access_token_secret: 'FSHWnPRKdSYOS45FqROMIz8JRPHha6gsVBhjrOHLEgMSi'
+    access_token_secret: process.env.access_token_secret
 });
 bot.tweetReply = function(msg, reply_to) {
     bot.post('statuses/update', {
