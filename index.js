@@ -1,9 +1,14 @@
 require('./heroku'); // Config Heroku ports
-const credentials = require('./credentials') // For local testing
 const Twit = require('twit'); // Lowercase for Heroku, but usually capitalized
 const fs = require('fs');
 const elonId = 789256792677179392; // AskElon user ID
 const elon = require('./elon').quotes;
+try {
+    console.log("Deployed locally; using stored credentials");
+    const credentials = require('./credentials'); // For local testing
+} catch (e) {
+    console.log("Deployed remotely; using Heroku credentials");
+}
 const bot = new Twit({
     consumer_key: 'rkWDuXPE4oVgqDbsOANVUtRvY',
     consumer_secret: process.env.consumer_secret || credentials.consumer_secret,
