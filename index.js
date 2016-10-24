@@ -4,8 +4,8 @@ const fs = require('fs');
 const elonId = 789256792677179392; // AskElon user ID
 const elon = require('./elon').quotes;
 try {
-    console.log("Deployed locally; using stored credentials");
     const credentials = require('./credentials'); // For local testing
+    console.log("Deployed locally; using stored credentials");
 } catch (e) {
     console.log("Deployed remotely; using Heroku credentials");
 }
