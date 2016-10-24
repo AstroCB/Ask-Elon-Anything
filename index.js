@@ -24,8 +24,8 @@ bot.tweetReply = function(msg, reply_to) {
 }
 
 function getRandomElon() {
-    var randInd = Math.floor(Math.random() * (elons.length + 1));
-    return elons[randInd];
+    var randInd = Math.floor(Math.random() * (elon.length + 1));
+    return elon[randInd];
 }
 
 function getTweetableElon(userLength) {
