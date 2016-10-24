@@ -1,13 +1,14 @@
 require('./heroku'); // Config Heroku ports
+const credentials = require('./credentials') // For local testing
 const Twit = require('twit'); // Lowercase for Heroku, but usually capitalized
 const fs = require('fs');
 const elonId = 789256792677179392; // AskElon user ID
 const elon = require('./elon').quotes;
 const bot = new Twit({
     consumer_key: 'rkWDuXPE4oVgqDbsOANVUtRvY',
-    consumer_secret: process.env.consumer_secret,
+    consumer_secret: process.env.consumer_secret || credentials.consumer_secret,
     access_token: '789256792677179392-fc2CyMSYb5fgpD36Nt1wlBA8DA0BYhW',
-    access_token_secret: process.env.access_token_secret
+    access_token_secret: process.env.access_token_secret || credentials.access_token_secret
 });
 bot.tweetReply = function(msg, reply_to) {
     bot.post('statuses/update', {
