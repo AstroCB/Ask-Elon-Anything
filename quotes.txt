@@ -112,3 +112,13 @@ Do we want a future where we are forever confined to one planet until some event
 It's a world-changing experience.
 I would advocate starting with the simplest useful system.  So I'd probably advocate wheels.  And then you can sort of say 'OK it's working %u2026'  Essentially, if you're trying to create a company it's important to limit the number of miracles in series.
 30-35 million dollars... Imagine there was a pallet of cash, that was vomiting through the atmosphere, and it was going to burn up, and smash into tiny pieces. Would you try to save it? Probably yes. Yeah, that sounds like a good idea. Umm, So, yeah, we want to get it back.
+The big booster will have an easier time of things than Falcon, as the mass ratio of the stages is lower and it will have lower density. Net result is that it won't come in quite as hot and fast as Falcon, so Falcon should be a bounding case on the big booster.
+Final Falcon 9 has a lot of minor refinements that collectively are important, but uprated thrust and improved legs are the most significant.
+Initially, glass panes with carbon fiber frames to build geodesic domes on the surface, plus a lot of miner/tunneling droids
+It had to be 42 for important scientific and fictional reasons!
+The dense packing is just to max out thrust to weight, but it would be cool if there was a virtual nozzle side effect.
+Anything that can burn, will burn.
+Not sure that we've really mastered anything yet. Maybe starting engines...
+That was built with latest and greatest carbon fiber prepreg. In theory, it should hold cryogenic propellant without leaking and without a sealing linker. Early tests are promising.
+A high acceleration landing is a lot more efficient, so there wouldn't be any hovering unless it encountered a problem or unexpected wind conditions. A rocket that lands slowly is wasting a lot of fuel.
+Will aim to release details of the habitation section when we have actual live mockups. Maybe in a year or two.
