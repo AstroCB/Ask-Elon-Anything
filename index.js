@@ -12,16 +12,16 @@ try {
     console.log("Deployed remotely; using Heroku credentials");
 }
 const bot = new Twit({
-    consumer_key: 'rkWDuXPE4oVgqDbsOANVUtRvY',
-    consumer_secret: credentials.consumer_secret,
-    access_token: '789256792677179392-fc2CyMSYb5fgpD36Nt1wlBA8DA0BYhW',
-    access_token_secret: credentials.access_token_secret
+    "consumer_key": 'rkWDuXPE4oVgqDbsOANVUtRvY',
+    "consumer_secret": credentials.consumer_secret,
+    "access_token": '789256792677179392-fc2CyMSYb5fgpD36Nt1wlBA8DA0BYhW',
+    "access_token_secret": credentials.access_token_secret
 });
-bot.tweetReply = function(msg, reply_to) {
+bot.tweetReply = (msg, reply_to) => {
     bot.post('statuses/update', {
-        status: msg,
-        in_reply_to_status_id: reply_to
-    }, function(err, data, response) {
+        "status": msg,
+        "in_reply_to_status_id": reply_to
+    }, (err, data, response) => {
         if (!err) {
             console.log("Tweet posted:");
             console.log(data);
@@ -32,14 +32,13 @@ bot.tweetReply = function(msg, reply_to) {
 }
 
 function getRandomElon() {
-    const randInd = Math.floor(Math.random() * (elon.length + 1));
-    return elon[randInd];
+    return elon[Math.floor(Math.random() * (elon.length + 1))];
 }
 
 function getTweetableElon(userLength) {
     let elonQuote = getRandomElon();
-    // 140 characters / tweet - (length of username and 1 character each for @ and space)
-    const acceptableLength = 140 - (userLength + 2);
+    // 280 characters / tweet - (length of username and 1 character each for @ and space)
+    const acceptableLength = 280 - (userLength + 2);
     while (elonQuote.length > acceptableLength) { // Make sure tweet is short enough
         elonQuote = getRandomElon();
     }
@@ -47,11 +46,11 @@ function getTweetableElon(userLength) {
 }
 
 const stream = bot.stream('user', {
-    replies: "all"
+    "replies": "all"
 });
 
-stream.on('tweet', function(tweet) {
-    console.log("Tweet received: " + tweet);
+stream.on('tweet', (tweet) => {
+    console.log(`Tweet received: ${tweet}`);
     const replyId = tweet.in_reply_to_user_id;
     const user = tweet.user;
     if (replyId) { // Is a reply
@@ -61,8 +60,8 @@ stream.on('tweet', function(tweet) {
         }
     }
 });
-stream.on('error', function(err) {
-    console.log("Stream error: " + err);
+stream.on('error', (err) => {
+    console.log(`Stream error: ${err}`);
     console.log("Restarting stream...");
     stream.stop();
     stream.start();

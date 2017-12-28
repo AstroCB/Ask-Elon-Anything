@@ -7,24 +7,24 @@
 const fs = require('fs');
 const lineReader = require('readline');
 
-exports.getInterface = function(file) {
+exports.getInterface = (file) => {
     return lineReader.createInterface({
-        input: fs.createReadStream(file)
+        "input": fs.createReadStream(file)
     });
 };
 
-exports.writeToFile = function(jsTxt) {
+exports.writeToFile = (jsTxt) => {
     fs.writeFileSync('elon.js', ""); // Clear file first
-    var jsStr = "exports.quotes = " + JSON.stringify(jsTxt);
+    let jsStr = `exports.quotes = ${JSON.stringify(jsTxt)}`;
     fs.writeFileSync('elon.js', jsStr);
 };
 
 const quotestxt = exports.getInterface("quotes.txt");
-var quotes = [];
-quotestxt.on('line', function(line) {
+let quotes = [];
+quotestxt.on('line', (line) => {
     quotes.push(line);
 });
-quotestxt.on('close', function() {
+quotestxt.on('close', () => {
     exports.writeToFile(quotes);
     console.log(require('./elon').quotes);
 });
